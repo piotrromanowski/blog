@@ -1,0 +1,13 @@
+baseURL = "localhost:1313"
+#baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "piotr.codes"
+theme = "hugo-natrium-theme"
+
+[[menu.main]]
+    name = "Home"
+    url = "http://piotr.codes"
+
+#[[menu.main]]
+#    name = "About"
+#    url = "/about/"
