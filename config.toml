@@ -1,12 +1,12 @@
-baseURL = "piotrromanowski.github.io/"
+baseURL = "https://piotrromanowski.github.io/"
 languageCode = "en-us"
 title = "piotr.codes"
 theme = "hugo-natrium-theme"
 
 [[menu.main]]
     name = "Home"
-    url = "http://piotr.codes"
+    url = "/"
 
-#[[menu.main]]
-#    name = "About"
-#    url = "/about/"
+[[menu.main]]
+    name = "About"
+    url = "/page/about"

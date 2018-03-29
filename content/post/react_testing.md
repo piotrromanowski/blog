@@ -1,13 +1,11 @@
 ---
-title: "React testing"
-date: 2018-01-17T16:22:41-04:00
+title: "React unit testing"
+date: 2018-02-17T16:22:41-04:00
 draft: false
 ---
 
-# React Testing
-
-A topic that doesn't have nearly as many tutorials, videos, and blog posts is
-testing components in React. Specifically, how to unit test components.
+Testing, A topic that doesn't have nearly as many tutorials, videos, and blog
+posts as it should have. Specifically, how to unit test components in React.
 
 First, let's look at how Wikipedia defines "unit testing".
 
@@ -69,8 +67,8 @@ export class EnhancedButton
 
   render() {
     const error = !!this.props.errorText
-      ?  <Error>{this.props.errorText}</Error>
-      :  undefined
+      ? <Error>{this.props.errorText}</Error>
+      : undefined
     const name = this.state.touched
       ? ('Clicked ' + this.state.count + ' time(s)!')
       : 'Click Me'
