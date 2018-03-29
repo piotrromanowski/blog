@@ -20,20 +20,20 @@ Now, let's take a look at what enzyme's docs have to say about shallow rendering
 > unit, and to ensure that your tests aren't indirectly asserting on behavior
 > of child components.
 
-That being said, it's safe to say that enzymes shallow rendering is what you
-should use when you're trying to enforce testing as a "unit".
+It's safe to say that enzymes shallow rendering is the right tool when you're
+trying to unit test your components.
 
-Shallow rendering constrains users to only allow developers to make assertions
-on the components props, and immediate children of the component. Note that I
-didn't include "state" because we should try to avoid making assertions on
-the implementation details of the component. Also, shallow rendering will also
-help improve the performance of your tests since you don't require all the
-extra DOM setup.
+Shallow rendering constrains developers to only make assertions on a components
+props, and the props of it's immediate children. Although shallow rendering
+permits you to access a components state, we should try to avoid doing
+so because we shouldn't be testing the implementation details of the component.
+Shallow rendering will also help improve the performance of your tests since it
+doesn't require all the extra DOM setup.
 
-Okay, I could continue writing about unit testing react components, or, I could
+Alright, I could continue writing about unit testing react components, or, I could
 bring in an example. Let's take a look at the below EnhancedButton component.
 
-{{< highlight javascript >}}
+{{< highlight jsx >}}
 // ... other imports ...
 import {Button} from './Button'
 import {Error} from './Error'
@@ -88,25 +88,23 @@ export class EnhancedButton
 {{< /highlight >}}
 
 
-Now after looking at that component, let's think about what's important to test,
-and/or what promises this components makes with it's consumers.
-
-To keep things brief, I'll write these out as a list
+Now after looking at that component, let's think about what's important to test.
+I like to make a list of guarantees that the component is making to the consumer.
 
 ### Without errorText
-- We can say that we expect this component to render a mysterious "Button"
-component with a particular set of props. We don't care what that "Button" does
-with the props, we just want them to be proxied through.
-- We expect that it does not initially render an Error component
-- When the mysterious "Button" is clicked, we expect the onClick prop to be
-  invoked and to change the children of the component
+  - We can say that we expect this component to render a mysterious "Button"
+  component with a particular set of props. We don't care what that "Button" does
+  with the props, we just want them to be passed through.
+  - We expect that it does not initially render an Error component
+  - When the mysterious "Button" is clicked, we expect the onClick prop to be
+    invoked and to change the children of the component
 
 ### With errorText
-- We expect that it renders an Error component
+  - We expect that it renders an Error component
 
-Let's take a look at what these expectations look like in code:
+Here's what these expectations would look like in code:
 
-{{< highlight javascript >}}
+{{< highlight jsx >}}
 describe('EnhancedButton', () => {
   let props: Readonly<EnhancedButtonProps>
   let component: ShallowWrapper<any, any>
@@ -177,3 +175,10 @@ describe('EnhancedButton', () => {
   })
 })
 {{< /highlight >}}
+
+And that's how I test 90% of my components! Of course, there are more complicated
+scenarios when you're dealing with larger nesting, HOCs, or third party libraries,
+but this style of testing has been pretty reliable.
+
+Follow me on twitter [@nullpiotr](http://www.twitter.com/nullpiotr) for regular updates
+on future blog posts! :)

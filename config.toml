@@ -2,6 +2,7 @@ baseURL = "https://piotrromanowski.github.io/"
 languageCode = "en-us"
 title = "piotr.codes"
 theme = "hugo-natrium-theme"
+pygmentsStyle = "monokai"
 
 [[menu.main]]
     name = "Home"
