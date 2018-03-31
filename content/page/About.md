@@ -1,10 +1,8 @@
 ---
-title: ""
+title: "About"
 date: 2018-03-21T23:54:31-04:00
 draft: false
 ---
-
-# About
 
 Since I can remember, I've always had a deep interest in how things worked. As a
 kid, I would get in trouble for "breaking" things when I was trying to get to
@@ -23,7 +21,7 @@ hanging out with friends and family, dabbling with the arts, or binging the
 next Netflix show. If we share any of the same interest, you should check out my
 blog!
 
-# Experience
+<h1 class="article-title">Experience</h1>
 
 <b>VistarMedia</b> *September 2016 - now (Software Engineer)* </br>
 Implemented new features to manage adspace and the advertising campaigns running

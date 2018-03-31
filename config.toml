@@ -1,6 +1,6 @@
 baseURL = "https://piotrromanowski.github.io/"
+title = "Piotr Romanowski"
 languageCode = "en-us"
-title = "piotr.codes"
 theme = "hugo-natrium-theme"
 pygmentsStyle = "monokai"
 
@@ -9,5 +9,6 @@ pygmentsStyle = "monokai"
     url = "/"
 
 [[menu.main]]
+    title = "Home"
     name = "About"
     url = "/page/about"
