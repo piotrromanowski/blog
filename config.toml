@@ -1,21 +1,37 @@
 baseURL = "https://piotrromanowski.github.io/"
 title = "Piotr Romanowski"
-languageCode = "en-us"
-theme = "hugo-natrium-theme"
-pygmentsStyle = "monokai"
+theme = "hugo-lithium-theme"
+googleAnalytics = ""
+disqusShortname = ""
+disableKinds = ["taxonomy", "taxonomyTerm", "section", "404"]
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
+    page = "/:title/"
 
 [[menu.main]]
-    name = "Home"
-    url = "/"
-
-[[menu.main]]
-    title = "Photography"
-    name = "Photography"
-    url = "/page/photography"
-    weight = -120
-
-[[menu.main]]
-    title = "About"
     name = "About"
-    url = "/page/about"
-    weight = -110
+    url = "/about/"
+[[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/piotrromanowski"
+[[menu.main]]
+    name = "Twitter"
+    url = "https://twitter.com/nullpiotr"
+
+[params]
+    mainSections = ["post"]
+
+    description = ""
+
+    # path to the favicon, under "static"
+    favicon = "favicon.png"
+
+    [params.logo]
+    url = "me-circle.png"
+    width = 50
+    height = 50
+    alt = "Logo"
+
+    [params.icon]
+    url = "favicon.png"
